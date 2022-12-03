@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>AWS Lambda Wasm Runtime</title>
+        <title>AWS Lambda Wasm Runtime Final</title>
         <link rel="icon" type="image/png" href="/aws-lambda-wasm-runtime/favicon.png" sizes="16x16" />
       </Head>
 
@@ -23,7 +23,7 @@ export default function Home() {
         <div className={styles.operating}>
           <div>
             <input type="file" id="fileElem" accept="image/png" className={styles['visually-hidden']} onChange={fileSelected} />
-            <label htmlFor="fileElem" className={styles.noselect}>Select an imag</label>
+            <label htmlFor="fileElem" className={styles.noselect}>Select an image</label>
             <div className={styles.thumb}>
               {origImg && <img src={origImg.src} />}
             </div>
