@@ -21,6 +21,17 @@ function _runWasm(reqBody) {
 }
 
 exports.handler = async function(event, context) {
+  return {
+    statusCode: 200,
+    headers: {
+      "Access-Control-Allow-Headers" : "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token",
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT"
+    },
+    body: {
+      "data": "je suis une pomme"
+    }
+  };
   var typedArray = new Uint8Array(event.body.match(/[\da-f]{2}/gi).map(function (h) {
     return parseInt(h, 16);
   }));
